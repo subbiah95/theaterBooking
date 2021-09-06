@@ -1,14 +1,18 @@
 package com.booking.theater.controller;
 
 import com.booking.theater.data.*;
+import com.booking.theater.model.BookingRequest;
+import com.booking.theater.model.BookingTransactionInProgress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @Service
-@RequestMapping(path="/seatbooking")
+@RequestMapping(path="/seatBooking")
 public class SeatBookingHandler {
     @Autowired
     private MovieShowRepository movieShowRepository;
@@ -28,5 +32,17 @@ public class SeatBookingHandler {
             }
         });
         return "saved";
+    }
+
+    @GetMapping("/seatStatus")
+    public @ResponseBody
+    List<SeatStatus> getSeatStatusForShowById (@RequestParam long showID){
+        return seatStatusRepository.getSeatStatusByShowId(showID);
+    }
+
+    @PostMapping("/request")
+    public @ResponseBody Long requestBooking(@RequestBody BookingRequest bookingRequest){
+        BookingTransactionInProgress.getInstance().addBookingToService(bookingRequest);
+        return bookingRequest.getBookingId();
     }
 }

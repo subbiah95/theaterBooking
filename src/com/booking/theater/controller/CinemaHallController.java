@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Service
-@RequestMapping(path="/cinemahall")
+@RequestMapping(path="/cinemaHall")
 public class CinemaHallController {
 
     @Autowired
