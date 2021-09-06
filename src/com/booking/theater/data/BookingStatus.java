@@ -6,5 +6,6 @@ public enum BookingStatus {
     /**
      * Temporarily hold seat while in payment Transaction
      */
-    ON_HOLD
+    ON_HOLD,
+    CANCELLED
 }

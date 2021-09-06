@@ -1,5 +1,6 @@
-package com.booking.theater.controller;
+package com.booking.theater.controller.auth;
 
+import com.booking.theater.annotation.Authorized;
 import com.booking.theater.data.CinemaHallRepository;
 import com.booking.theater.data.MovieRepository;
 import com.booking.theater.data.MovieShow;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Service
-@RequestMapping(path="/movieShow")
+@RequestMapping(path="/movieShow",headers = {"Authorization"})
 public class MovieShowController {
     @Autowired
     private MovieRepository movieRepository;
@@ -22,6 +23,7 @@ public class MovieShowController {
     private MovieShowRepository movieShowRepository;
 
     @PostMapping
+    @Authorized
     public @ResponseBody String addNewMovie (@RequestParam long movieId, @RequestParam long hallId, @RequestParam long startTime){
         long id;
         MovieShow movieShow = new MovieShow();
@@ -31,10 +33,5 @@ public class MovieShowController {
         id = movieShow.getId();
         movieShowRepository.save(movieShow);
         return "saved";
-    }
-
-    @GetMapping
-    public @ResponseBody Iterable<MovieShow> getAllMovie(){
-        return movieShowRepository.findAll();
     }
 }

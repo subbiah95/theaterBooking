@@ -10,11 +10,9 @@ import org.springframework.context.event.EventListener;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Service
-@RequestMapping(path="/prepareBooking")
 public class BookingWorkers {
 
     @Autowired
