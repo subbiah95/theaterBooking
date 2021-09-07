@@ -24,7 +24,7 @@ public class MovieShowController {
 
     @PostMapping
     @Authorized
-    public @ResponseBody String addNewMovie (@RequestParam long movieId, @RequestParam long hallId, @RequestParam long startTime){
+    public @ResponseBody String addNewMovieShow (@RequestParam long movieId, @RequestParam long hallId, @RequestParam long startTime){
         long id;
         MovieShow movieShow = new MovieShow();
         movieRepository.findById(movieId).ifPresent(movieShow::setMovie);

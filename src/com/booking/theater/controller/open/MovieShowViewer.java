@@ -18,7 +18,7 @@ public class MovieShowViewer {
     private MovieShowRepository movieShowRepository;
 
     @GetMapping
-    public @ResponseBody Iterable<MovieShow> getAllMovie(){
+    public @ResponseBody Iterable<MovieShow> getAllMovieShows(){
         return movieShowRepository.findAll();
     }
 }
