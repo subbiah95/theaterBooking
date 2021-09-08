@@ -1,5 +1,6 @@
 package com.booking.theater.data;
 
+import com.booking.theater.model.PaymentStatus;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

@@ -2,7 +2,9 @@ package com.booking.theater.service;
 
 import com.booking.theater.data.*;
 import com.booking.theater.model.BookingRequest;
+import com.booking.theater.model.BookingStatus;
 import com.booking.theater.model.BookingTransactionOnHold;
+import com.booking.theater.model.PaymentStatus;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

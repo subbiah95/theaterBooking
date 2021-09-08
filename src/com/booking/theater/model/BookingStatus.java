@@ -1,4 +1,4 @@
-package com.booking.theater.data;
+package com.booking.theater.model;
 
 public enum BookingStatus {
     BOOKED,

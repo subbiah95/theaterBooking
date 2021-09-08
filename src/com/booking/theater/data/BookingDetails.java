@@ -1,5 +1,6 @@
 package com.booking.theater.data;
 
+import com.booking.theater.model.PaymentStatus;
 import lombok.Getter;
 import lombok.Setter;
 

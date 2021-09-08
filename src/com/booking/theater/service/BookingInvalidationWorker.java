@@ -1,9 +1,7 @@
 package com.booking.theater.service;
 
 import com.booking.theater.data.*;
-import com.booking.theater.model.BookingRequest;
-import com.booking.theater.model.BookingTransactionInProgress;
-import com.booking.theater.model.BookingTransactionOnHold;
+import com.booking.theater.model.*;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

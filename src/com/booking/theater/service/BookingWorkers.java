@@ -1,7 +1,5 @@
-package com.booking.theater.controller;
+package com.booking.theater.service;
 
-import com.booking.theater.service.BookingInvalidationWorker;
-import com.booking.theater.service.BookingWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.boot.context.event.ApplicationReadyEvent;

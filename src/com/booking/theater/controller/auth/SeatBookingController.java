@@ -2,6 +2,7 @@ package com.booking.theater.controller.auth;
 
 import com.booking.theater.annotation.Authorized;
 import com.booking.theater.data.*;
+import com.booking.theater.model.BookingStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;

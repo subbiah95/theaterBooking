@@ -3,6 +3,7 @@ package com.booking.theater.controller.open;
 import com.booking.theater.data.*;
 import com.booking.theater.model.BookingRequest;
 import com.booking.theater.model.BookingTransactionInProgress;
+import com.booking.theater.model.PaymentStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -33,7 +34,8 @@ public class SeatBookingHandler {
     }
 
     @GetMapping("/bookingStatus")
-    public @ResponseBody PaymentStatus bookingStatus(@RequestParam long bookingId){
+    public @ResponseBody
+    PaymentStatus bookingStatus(@RequestParam long bookingId){
         return bookingDetailsRepository.getPaymentStatus(bookingId);
     }
 }

@@ -1,6 +1,6 @@
 package com.booking.theater.data;
 
-import lombok.Builder;
+import com.booking.theater.model.BookingStatus;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.DynamicUpdate;
